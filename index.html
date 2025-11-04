@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTF-8 Character Grid Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UTF-8 Character Grid Viewer</h1>
+        <p class="subtitle">Paste any text to see each character's details including UTF code and position</p>
+        
+        <div class="input-section">
+            <label for="textInput">Enter or paste your text:</label>
+            <textarea 
+                id="textInput" 
+                placeholder="Type or paste your text here... Try emojis! 🎉 Unicode characters! 你好 Symbols! ★☆♥"
+                autofocus
+            ></textarea>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-item">
+                <div class="stat-label">Total Characters</div>
+                <div class="stat-value" id="charCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Code Points</div>
+                <div class="stat-value" id="codePointCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Bytes (UTF-8)</div>
+                <div class="stat-value" id="byteCount">0</div>
+            </div>
+        </div>
+
+        <div id="gridContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
